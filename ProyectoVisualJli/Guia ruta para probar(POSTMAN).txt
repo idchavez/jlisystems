@@ -1,0 +1,108 @@
+GUIA PARA PROBAR EN POSTMAN
+
+--------------------------INFORMES DE PRESTAMOS-------------------------
+
+1.
+//Buscar prestamos filtrando por id de usuario y por un lapso de fecha/ INFORME PRINCIPAL REQUERIDO POR EL CLIENTE
+RUTA(GET): prestamo/l/:idPersona/:fechaIni/:fechaFin
+EJEMPLO EN POSTMAN: prestamo/l/2/2020-01-01/2022-10-10
+
+2.
+//INFORME PARA PODER VER LOS PRESTAMOS POR CADA LECTOR
+RUTA(GET): prestamo/l/:idPersona
+EJEMPLO EN POSTMAN: prestamo/l/1
+
+3.
+//Determinar o mostrar el user con mas prestamos, se mostrara de mayor a menor
+RUTA(GET): prestamo/m/a/s
+EJEMPLO EN POSTMAN: prestamo/m/a/s
+
+------------------------TABLA AUTOR--------------------------------------
+1.
+//listar que muestra todos los Autores con el INNER JOIN
+RUTA(GET): /autor
+
+2.
+//listar que muestra todas las autores con los ID de las llaves foraneas
+RUTA(GET): /autor/c
+
+3.
+//metodo CRUD read(leer), que muestra el Autor solicitado por ID
+RUTA(GET): /autor/:id
+
+4.
+//metodo CRUD crear, usando el verbo post. EN ESTE SE COLOCA EN POSTAMAN-BODY-RAW lo que nos da la busqueda 2 con llaves foraneas
+RUTA(POST): /autor 
+
+TOCA CREA PRIMERO UNA PERSONA CON TIPO AUTOR YA QUE ES UNA REALCION UNO A UNO
+
+5. 
+//metodo CRUD update (actualizar), usando el verbo put. EN ESTE SE COLOCA EN POSTAMAN-BODY-RAW lo que nos da la busqueda 2 con llaves foraneas
+RUTA(PUT): /autor 
+
+-----------------------------EDITORIAL--------------------------------------
+1.
+se repite el mismo proceso de la anterior tabla Autor, lo unico que cambia es que ya no se llamara autor si no /editorial
+
+2.
+Para las llaves foraneas se usa /c
+
+RUTA: /editorial
+
+----------------------------ESTADO_LIBRO---------------------------------------------
+En este se repite lo mismo pero no tiene llaves foraneas
+
+RUTA: /estadoLibro
+
+----------------------------GENERO----------------------
+En este se repite lo mismo pero no tiene llaves foraneas por lo cual no se tiene la busqueda /c
+
+RUTA: /genero
+
+----------------------------IDIOMA-------------------------------------
+En este se repite lo mismo pero no tiene llaves foraneas por lo cual no se tiene la busqueda /c
+
+RUTA: /idioma
+
+--------------------------LIBRO-------------------------------------
+Este tiene llaves foraneas por lo cual si se va actualizar o crear toca con los campos que de la busqueda /libro/c
+
+RUTA: /libro
+
+---------------------------PAIS---------------------------------------
+En este se repite lo mismo pero no tiene llaves foraneas por lo cual no se tiene la busqueda /c
+
+
+RUTA: /pais
+--------------------------PERSONA--------------------------------------
+Este tiene llaves foraneas por lo cual si se va actualizar o crear toca con los campos que de la busqueda /persona/c
+
+RUTA: /persona
+-------------------------PRESTAMO--------------------------------------
+Este tiene llaves foraneas por lo cual si se va actualizar o crear toca con los campos que de la busqueda /prestamo/c
+
+RUTA: /prestamo
+
+-------------------------TIPO DE DOCUMENTO----------------------------------
+En este se repite lo mismo pero no tiene llaves foraneas por lo cual no se tiene la busqueda /c
+
+RUTA: /tipDoc
+
+-----------------------TIPOS DE PERSONA------------------------------------------
+En este se repite lo mismo pero no tiene llaves foraneas por lo cual no se tiene la busqueda /c
+
+RUTA: /tiposPersona
+
+
+
+
+
+
+
+
+
+
+
+
+
+
